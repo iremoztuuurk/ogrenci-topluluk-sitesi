@@ -1,20 +1,29 @@
 import React, { useState } from 'react';
 import './LoginPage.css';
-import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
-function LoginPage({ onKayitClick }) {
+function LoginPage({ onKayitClick, onLoginSuccess }) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Giriş işlemleri burada yapılabilir
-    console.log(email, password);
+    try {
+      const response = await axios.post('http://localhost:8080/users/login', {
+        mail: email,
+        password: password
+      });
+      const token = response.data.token;
+      console.log('Login successful. Token:', token);
+      onLoginSuccess(); // Başarılı giriş sonrası çağrılır
+    } catch (error) {
+      console.error('Login failed:', error);
+    }
   };
 
   return (
     <div className="login-container">
-      <img src="/iconmonstr-party-21-240.png" alt="User interface element" className="login-image" /> {/* Resim eklenmiştir */}
+      <img src="/iconmonstr-party-21-240.png" alt="User interface element" className="login-image" />
       <h2>Öğrenci Toplulukları</h2>
       <form onSubmit={handleSubmit}>
         <input 

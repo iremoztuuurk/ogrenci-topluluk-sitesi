@@ -41,17 +41,19 @@ function Register() {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
-                        <input type="text" name="id" value={user.status} onChange={handleChange} placeholder="TC" />
-
-            <input type="text" name="name" value={user.name} onChange={handleChange} placeholder="Ad" />
-            <input type="text" name="surname" value={user.surname} onChange={handleChange} placeholder="Soyad" />
-            <input type="date" name="birthDate" value={user.birthDate} onChange={handleChange} placeholder="Doğum Günü" />
-            <input type="text" name="school" value={user.school} onChange={handleChange} placeholder="Okul" />
-            <input type="email" name="mail" value={user.mail} onChange={handleChange} placeholder="E-posta" />
-            <input type="password" name="password" value={user.password} onChange={handleChange} placeholder="Şifre" />
-            <button type="submit">Kayıt Ol</button>
-        </form>
+        <div>
+            <h1>Kayıt Ol</h1> {/* Başlık ekledik */}
+            <form onSubmit={handleSubmit}>
+                <input type="text" name="id" value={user.status} onChange={handleChange} placeholder="TC" />
+                <input type="text" name="name" value={user.name} onChange={handleChange} placeholder="Ad" />
+                <input type="text" name="surname" value={user.surname} onChange={handleChange} placeholder="Soyad" />
+                <input type="date" name="birthDate" value={user.birthDate} onChange={handleChange} placeholder="Doğum Günü" />
+                <input type="text" name="school" value={user.school} onChange={handleChange} placeholder="Okul" />
+                <input type="email" name="mail" value={user.mail} onChange={handleChange} placeholder="E-posta" />
+                <input type="password" name="password" value={user.password} onChange={handleChange} placeholder="Şifre" />
+                <button type="submit">Kayıt Ol ve Giriş Yap</button>
+            </form>
+        </div>
     );
 }
 

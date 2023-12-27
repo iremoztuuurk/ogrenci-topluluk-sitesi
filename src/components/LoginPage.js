@@ -30,11 +30,12 @@ function LoginPage() {
 
   return (
     <div className="login-container">
+      
       <img src="/iconmonstr-party-21-240.png" alt="User interface element" className="login-image" />
       <h2>Öğrenci Toplulukları</h2>
       <form onSubmit={handleSubmit}>
         <div className="input-container">
-          <label>E-posta:</label>
+          <label>Mail:</label>
           <input 
             type="email" 
             value={email} 

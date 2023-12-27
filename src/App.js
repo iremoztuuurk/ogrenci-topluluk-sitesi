@@ -1,25 +1,18 @@
 import React from 'react';
 import './App.css';
+import { BrowserRouter as Router, Route } from 'react-router-dom'; // Router ve Route bileşenlerini içe aktarın
 import LoginPage from './components/LoginPage';
-import KayitOlPage from './components/KayitOlPage';
-import TopluluklarSayfasi from './components/KayitOlPage';
+import Register from './components/Register';
+import TopluluklarSayfasi from './components/TopluluklarSayfasi';
 
 function App() {
-  const [currentPage, setCurrentPage] = React.useState('login');
-
-  const handleKayitClick = () => {
-    setCurrentPage('kayit');
-  };
-
-  const handleLoginSuccess = () => {
-    setCurrentPage('topluluk'); // Başarılı giriş sonrası yönlendirme
-  };
-
   return (
     <div className="App">
-      {currentPage === 'login' && <LoginPage onKayitClick={handleKayitClick} onLoginSuccess={handleLoginSuccess} />}
-      {currentPage === 'kayit' && <KayitOlPage />}
-      {currentPage === 'topluluk' && <TopluluklarSayfasi />} {/* Topluluk sayfasını burada gösterebilirsiniz */}
+      <Router>
+        <Route path="/" exact component={LoginPage} />
+        <Route path="/register" component={Register} />
+        <Route path="/topluluk" component={TopluluklarSayfasi} />
+      </Router>
     </div>
   );
 }

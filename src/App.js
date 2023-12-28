@@ -1,22 +1,22 @@
-import React from 'react';
-import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import LoginPage from './components/LoginPage';
-import Register from './components/Register';
-import TopluluklarSayfasi from './components/TopluluklarSayfasi';
+import LoginPage from './components/LoginPage'; // Login komponentini içe aktarın
+import Register from './components/Register'; // Register komponentini içe aktarın
+import Community from './components/Community'; // Community komponentini içe aktarın
+import Detay from './components/Detay'; // Community komponentini içe aktarın
 
 function App() {
-  return (
-    <div className="App">
-      <Router>
-        <Routes>
-          <Route path="/" element={<LoginPage />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/topluluk" element={<TopluluklarSayfasi />} />
-        </Routes>
-      </Router>
-    </div>
-  );
+    return (
+        <Router>
+            <Routes>
+                <Route path="/Login" element={<LoginPage />} />
+                <Route path="/Register" element={<Register />} />
+                <Route path="/community" element={<Community />} />
+                <Route path="/detay" element={<Detay />} />
+
+   {/* Diğer rotalarınız */}
+            </Routes>
+        </Router>
+    );
 }
 
 export default App;

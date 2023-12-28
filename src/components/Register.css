@@ -4,7 +4,7 @@ form {
   max-width: 400px;
   margin: 50px auto; /* Formu merkeze almak için */
   padding: 20px;
-  border: 1px solid #eaeaea;
+  border: 1px solid #f8eadc;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Hafif gölge efekti */
 }
@@ -21,6 +21,12 @@ input[type="password"] {
   font-size: 16px;
   transition: border-color 0.3s; /* Daha yumuşak bir geçiş için */
 }
+/* Register.css */
+
+h1 {
+  text-align: center; /* Metni yatay olarak ortala */
+  margin-top: 20px;   /* İsteğe bağlı: Üzerinde biraz boşluk ekleyin */}
+
 
 input[type="text"]:focus,
 input[type="date"]:focus,

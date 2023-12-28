@@ -8,7 +8,6 @@ function Register() {
         surname: '', // Soyad
         mail: '', // E-posta
         password: '', // Şifre
-        id: '', // TC
         school: '', // Okul
         birthDate: '' // Doğum Günü
     });
@@ -42,9 +41,8 @@ function Register() {
 
     return (
         <div>
-            <h1>Kayıt Ol</h1> {/* Başlık ekledik */}
+             <h1>Kayıt Ol</h1> {/* Başlık ekledik */}
             <form onSubmit={handleSubmit}>
-                <input type="text" name="id" value={user.status} onChange={handleChange} placeholder="TC" />
                 <input type="text" name="name" value={user.name} onChange={handleChange} placeholder="Ad" />
                 <input type="text" name="surname" value={user.surname} onChange={handleChange} placeholder="Soyad" />
                 <input type="date" name="birthDate" value={user.birthDate} onChange={handleChange} placeholder="Doğum Günü" />

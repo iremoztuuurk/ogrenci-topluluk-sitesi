@@ -18,7 +18,7 @@ function LoginPage() {
       const token = response.data.token;
       console.log('Login successful. Token:', token);
       // onLoginSuccess(); // Use navigate here if needed after login success
-      navigate('/community'); // Example redirection after successful login
+      navigate('/community');
     } catch (error) {
       console.error('Login failed:', error);
     }

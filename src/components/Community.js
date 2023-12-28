@@ -25,8 +25,8 @@ function Community() {
       <ul>
         {topluluklar.map(topluluk => (
           <li key={topluluk.id}>
-            {/* Link bileşenini topluluk.id ile güncelledim. */}
-            <Link to={`/topluluk/${topluluk.id}`}></Link>
+            {/* Topluluk ismini göstermek için Link bileşeni içine topluluk.name ekledim. */}
+            <Link to={`/topluluk/${topluluk.id}`}>{topluluk.name}</Link>
           </li>
         ))}
       </ul>
